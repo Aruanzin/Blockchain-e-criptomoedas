@@ -1,0 +1,4 @@
+https://github.com/Aruanzin/Blockchain-e-criptomoedas
+
+
+O git contem um readme.md com as especificações da atividade diaria, contendo as especificações do projeto

@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2024-11-08T18:18:02.002Z",
+    "temperatura": "21.41"
+  },
+  {
+    "timestamp": "2024-11-08T18:18:12.008Z",
+    "temperatura": "29.00"
+  },
+  {
+    "timestamp": "2024-11-08T18:18:22.010Z",
+    "temperatura": "8.66"
+  },
+  {
+    "timestamp": "2024-11-08T18:18:32.018Z",
+    "temperatura": "9.36"
+  },
+  {
+    "timestamp": "2024-11-08T18:18:42.024Z",
+    "temperatura": "35.34"
+  },
+  {
+    "timestamp": "2024-11-08T18:18:52.033Z",
+    "temperatura": "-2.41"
+  },
+  {
+    "timestamp": "2024-11-08T18:19:02.048Z",
+    "temperatura": "0.26"
+  },
+  {
+    "timestamp": "2024-11-08T18:19:12.050Z",
+    "temperatura": "19.75"
+  },
+  {
+    "timestamp": "2024-11-08T18:19:22.052Z",
+    "temperatura": "-3.65"
+  },
+  {
+    "timestamp": "2024-11-08T18:19:32.062Z",
+    "temperatura": "30.23"
+  }
+]

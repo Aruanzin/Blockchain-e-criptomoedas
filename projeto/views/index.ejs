@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain de Acesso</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Blockchain de Acesso</h1>
+    <form action="/register" method="post">
+        <label for="numEntries">Quantas entradas você deseja registrar?</label>
+        <select name="numEntries" id="numEntries" onchange="updateForm()">
+            <% for (let i = 1; i <= 10; i++) { %>
+                <option value="<%= i %>" <%= i === numEntries ? 'selected' : '' %>><%= i %></option>
+            <% } %>
+        </select>
+        <div id="entries">
+            <% for (let i = 0; i < numEntries; i++) { %>
+                <div class="entry">
+                    <h2>Entrada <%= i + 1 %></h2>
+                    <label for="nome_<%= i %>">Nome:</label>
+                    <input type="text" name="nome_<%= i %>" id="nome_<%= i %>" required>
+                    <label for="dia_<%= i %>">Data (YYYY-MM-DD):</label>
+                    <input type="text" name="dia_<%= i %>" id="dia_<%= i %>" required pattern="\d{4}-\d{2}-\d{2}">
+                    <label for="hora_<%= i %>">Hora (HH:MM):</label>
+                    <input type="text" name="hora_<%= i %>" id="hora_<%= i %>" required pattern="\d{2}:\d{2}">
+                </div>
+            <% } %>
+        </div>
+        <button type="submit">Registrar</button>
+    </form>
+    <script>
+        function updateForm() {
+            const numEntries = document.getElementById('numEntries').value;
+            const entriesDiv = document.getElementById('entries');
+            entriesDiv.innerHTML = '';
+
+            for (let i = 0; i < numEntries; i++) {
+                entriesDiv.innerHTML += `
+                    <div class="entry">
+                        <h2>Entrada ${i + 1}</h2>
+                        <label for="nome_${i}">Nome:</label>
+                        <input type="text" name="nome_${i}" id="nome_${i}" required>
+                        <label for="dia_${i}">Data (YYYY-MM-DD):</label>
+                        <input type="text" name="dia_${i}" id="dia_${i}" required pattern="\\d{4}-\\d{2}-\\d{2}">
+                        <label for="hora_${i}">Hora (HH:MM):</label>
+                        <input type="text" name="hora_${i}" id="hora_${i}" required pattern="\\d{2}:\\d{2}">
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

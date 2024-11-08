@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Registro</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Resultados do Registro</h1>
+    <h2>Entradas Registradas</h2>
+    <ul>
+        <% entries.forEach((entry, index) => { %>
+            <li>
+                <strong>Entrada <%= index + 1 %>:</strong>
+                <ul>
+                    <li>Nome: <%= entry.nome %></li>
+                    <li>Data: <%= entry.dia %></li>
+                    <li>Hora: <%= entry.hora %></li>
+                    <% if (entry.error) { %>
+                        <li style="color: red;"><%= entry.error %></li>
+                    <% } %>
+                </ul>
+            </li>
+        <% }) %>
+    </ul>
+    <h2>Blockchain</h2>
+    <pre><%= JSON.stringify(blockchain, null, 4) %></pre>
+    <a href="/">Voltar</a>
+</body>
+</html>
